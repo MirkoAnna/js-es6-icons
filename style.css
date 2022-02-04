@@ -40,6 +40,12 @@ body {
 .container header .header-bottom label {
     margin-right: 1%;
 }
+
+.container header .header-bottom select option {
+    background-color: rgb(183, 234, 239);
+    color: rgb(47, 48, 54);
+}
+
 /* Fine header */
 
 /* Inizio main */
