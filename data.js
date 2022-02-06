@@ -1,4 +1,9 @@
-[
+/*Milestone 1 
+Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell’icona e l’icona stessa. 
+Milestone 2 
+Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.*/
+
+const icone = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +117,35 @@
 		color: 'blue'
 	}
 ];
+// Assegno il contenitore principalea ad una variabile
+const contenitoreBoxIcons = document.getElementById('boxes-container');
+creatoreIcone(contenitoreBoxIcons, icone);
+
+
+
+
+
+
+
+
+
+//FUNZIONI UTILI
+
+// Creo funzione che creerà in manera dinamica gli oggetti nell'arrey di oggetti 'icone'
+function creatoreIcone(contenitoreBoxIcons, icone) {
+
+	// Creo variabile che conterrà il nodo box-icons
+	let contenuto = '';
+
+	// Uso forEach per ciclare tutti gli oggetti e procedere.
+	icone.forEach(oggetto => {
+		// creo nodo dentro contenuto
+		contenuto += `<div class="box-icons">
+						<i class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"; style="color:${oggetto.color}"></i>
+						<p class="text">${oggetto.name}</p>
+						</div>`
+	});
+	// Visualizzo su pagina i box delle icone('box-icons') all'interno di contenitoreBoxIcons('boxes-container')
+	contenitoreBoxIcons.innerHTML = contenuto;
+	
+}

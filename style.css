@@ -13,6 +13,7 @@ body {
     height: 100vh;
 }
 
+
 /* Inizio header */
 .container header {
     height: 20%;
@@ -45,8 +46,8 @@ body {
     background-color: rgb(183, 234, 239);
     color: rgb(47, 48, 54);
 }
-
 /* Fine header */
+
 
 /* Inizio main */
 .container main {
@@ -54,14 +55,15 @@ body {
     background-color: rgb(221, 221, 221);
 }
 
-.container main .boxes-container {
+.container main #boxes-container {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
     padding: 1.2%;
+    overflow: hidden;
 }
 
-.container main #box-icons {
+.container main .box-icons {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,14 +77,14 @@ body {
     background-color: whitesmoke;
 }
 
-.container main #box-icons i {
-    font-size: 200%;
+.container main .box-icons i {
+    font-size: 190%;
     margin-bottom: 2%;
 }
 
-.container main #box-icons p {
+.container main .box-icons .text {
     text-transform: uppercase;
-    font-size: 85%;
+    font-size: 75%;
 }
 
 /* Fine main */
